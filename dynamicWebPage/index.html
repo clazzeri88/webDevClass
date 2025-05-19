@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello to the Submission For Assignment: 02: A Dynamic HTML Page</title>
+</head>
+<body>
+    <p>First and Last: Carl Lazzeri</p>
+    <p>Course Name: COP4813 Web Applications Programming</p>
+    <p>My Major: Computer Science</p>
+    <p>Message: Hello and thanks for visiting!</p>
+
+    <script>
+        function updateClockAndBackground() // Get current hour and update background color
+        {
+            // Create Date object and get hour
+            const now = new Date();
+            const hour = now.getHours();
+
+            // Set Background Color 
+            if (hour >= 6 && hour < 12) // 6am - 12pm
+            {
+                document.body.style.backgroundColor = "red"
+            }
+            else if (hour >= 12 && hour < 18) // 12pm - 6pm
+            {
+                document.body.style.backgroundColor = "blue"
+            }
+            else if (hour >= 18 && hour < 21) // 6pm - 9pm
+            {
+                document.body.style.backgroundColor = "green"
+            }
+            else // 9pm - 6am
+            {
+                document.body.style.backgroundColor = "yellow"
+            }
+        }
+
+        updateClockAndBackground() // Immediately update background on page load
+
+        setInterval(updateClockAndBackground, 1000) // Update background every 1 second
+    </script>
+</body>
+</html>
 
