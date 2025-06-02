@@ -11,7 +11,7 @@
     <p>Message: Hello, enjoy the images!!</p>
 
     <script>
-        function udpateDisplayImage() // Get current hour and update background color
+        function updateDisplayImage() // Get current hour and update background color
         {
             // Create Date object and get hour
             const now = new Date();
@@ -20,25 +20,22 @@
             // Set Background Color 
             if (hour >= 6 && hour < 12) // 6am - 12pm
             {
-
+                <img src="imgs/morning.webp" alt="Good Morning Image." />
             }
             else if (hour >= 12 && hour < 18) // 12pm - 6pm
             {
+                <img src="imgs/afternoon.webp" alt="Good Afternoon Image." />
+            }
+            else // 6pm - 6am
+            {
+                <img src="imgs/morning.webp" alt="Good Evening Image." />"
+            }
 
-            }
-            else if (hour >= 18 && hour < 21) // 6pm - 6am
-            {
-                document.body.style.backgroundColor = "green"
-            }
-            else // 9pm - 6am
-            {
-                document.body.style.backgroundColor = "yellow"
-            }
         }
 
-        udpateDisplayImage() // Immediately update background on page load
+        updateDisplayImage() // Immediately update background on page load
 
-        setInterval(udpateDisplayImage, 1000) // Update background every 1 second
+        setInterval(updateDisplayImage, 1000) // Update background every 1 second
     </script>
 </body>
 </html>
