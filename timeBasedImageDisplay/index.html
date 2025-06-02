@@ -9,33 +9,42 @@
     <p>Course Name: COP4813 Web Applications Programming</p>
     <p>My Major: Computer Science</p>
     <p>Message: Hello, enjoy the images!!</p>
-
+    <div id-"pending-image"></div>
+    
     <script>
-        function updateDisplayImage() // Get current hour and update background color
+        function updateDisplayImage() // Get current hour and display image
         {
             // Create Date object and get hour
             const now = new Date();
             const hour = now.getHours();
 
-            // Set Background Color 
+            const image_container = document.getElementById("pending-image");
+
+            let imgSrc = "";
+            let altText = "";
+            
+            // Set Image 
             if (hour >= 6 && hour < 12) // 6am - 12pm
             {
-                <img src="imgs/morning.png" alt="Good Morning Image." />
+                imgSrc = "imgs/morning.png";
+                altText = "Good Morning Image.";
             }
             else if (hour >= 12 && hour < 18) // 12pm - 6pm
             {
-                <img src="imgs/afternoon.png" alt="Good Afternoon Image." />
+                imgSrc = "imgs/afternoon.png";
+                altText = "Good Afternoon Image.";
             }
             else // 6pm - 6am
             {
-                <img src="imgs/morning.png" alt="Good Evening Image." />"
+                imgSrc = "imgs/evening.png";
+                altText = "Good Evening Image.";
             }
-
+            image_container.innerHTML = `<img src="${imgSrc}" alt="${altText}" />`;
         }
 
-        updateDisplayImage() // Immediately update background on page load
+        updateDisplayImage() // Immediately update image on page load
 
-        setInterval(updateDisplayImage, 1000) // Update background every 1 second
+        setInterval(updateDisplayImage, 1000) // Update image every 1 second
     </script>
 </body>
 </html>
