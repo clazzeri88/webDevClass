@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Topics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    .topic {
+      margin-bottom: 15px;
+      border-radius: 6px;
+      padding: 10px;
+    }
+
+    .topic-title {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .topic-content {
+      display: none;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .active .topic-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Interactive Topics</h2>
+
+  <div class="topic" onclick="toggleTopic(this)">
+    <div class="topic-title">Topic 1: Hash Tables</div>
+    <div class="topic-content">
+        <a href="./subject1/topic1.html">topic1
+    </div>
+  </div>
+
+  <div class="topic" onclick="toggleTopic(this)">
+    <div class="topic-title">Topic 2: Open Addressing</div>
+    <div class="topic-content">
+      Open addressing handles collisions by probing the array for the next available slot, using linear, quadratic, or double hashing.
+    </div>
+  </div>
+
+  <div class="topic" onclick="toggleTopic(this)">
+    <div class="topic-title">Topic 3: Load Factor</div>
+    <div class="topic-content">
+      The load factor determines how full a hash table is. A lower load factor reduces collisions but increases memory usage.
+    </div>
+  </div>
+
+  <script>
+    function toggleTopic(element) {
+      element.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
