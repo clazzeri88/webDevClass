@@ -6,25 +6,42 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 30px;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
     }
 
     .topic {
-      margin-bottom: 15px;
-      border-radius: 6px;
-      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
 
     .topic-title {
-      font-weight: bold;
+      padding: 10px;
+      background-color: #e0e0e0;
       cursor: pointer;
-      padding: 5px;
     }
 
     .topic-content {
       display: none;
       padding: 10px;
-      background-color: #f9f9f9;
+    }
+
+    .topic-content a {
+      display: block;
+      margin: 5px 0;
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .topic-content a:hover {
+      text-decoration: underline;
     }
 
     .active .topic-content {
@@ -34,26 +51,35 @@
 </head>
 <body>
 
-  <h2>Interactive Topics</h2>
+  <h2>Topics</h2>
 
   <div class="topic" onclick="toggleTopic(this)">
-    <div class="topic-title">Topic 1: Hash Tables</div>
+    <div class="topic-title">Marine Life</div>
     <div class="topic-content">
-        <a href="./subject1/topic1.html">topic1
+      <a href="./subject1/clownfish.html">Clownfish</a>
+      <a href="./subject1/bluewhale.html">Blue Whale</a>
+      <a href="./subject1/octopus.html">Octopus</a>
+      <a href="./subject1/greatwhite.html">Great White Shark</a>
     </div>
   </div>
 
   <div class="topic" onclick="toggleTopic(this)">
-    <div class="topic-title">Topic 2: Open Addressing</div>
+    <div class="topic-title">Land Life</div>
     <div class="topic-content">
-      Open addressing handles collisions by probing the array for the next available slot, using linear, quadratic, or double hashing.
+      <a href="./subject2/elephant.html">Elephant</a>
+      <a href="./subject2/kangaroo.html">Kangaroo</a>
+      <a href="./subject2/lion.html">Lion</a>
+      <a href="./subject2/panda.html">Panda</a>
     </div>
   </div>
 
   <div class="topic" onclick="toggleTopic(this)">
-    <div class="topic-title">Topic 3: Load Factor</div>
+    <div class="topic-title">Plant Life</div>
     <div class="topic-content">
-      The load factor determines how full a hash table is. A lower load factor reduces collisions but increases memory usage.
+      <a href="./subject3/bamboo.html">Bamboo</a>
+      <a href="./subject3/cactus.html">Cactus</a>
+      <a href="./subject3/sunflower.html">Sunflower</a>
+      <a href="./subject3/venusflytrap.html">Venus Fly Trap</a>
     </div>
   </div>
 
