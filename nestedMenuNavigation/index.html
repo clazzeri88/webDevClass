@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Dropdown Topics</title>
+  
+  <!--CSS Styling-->>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -51,8 +53,8 @@
 </head>
 <body>
 
+  <!--Topics with assosiated links | topic click calls "toggleTopic" passing the container object as a parameter-->>
   <h2>Topics</h2>
-
   <div class="topic" onclick="toggleTopic(this)">
     <div class="topic-title">Marine Life</div>
     <div class="topic-content">
@@ -83,6 +85,7 @@
     </div>
   </div>
 
+  <!--Hides/Shows the container contents-->
   <script>
     function toggleTopic(element) {
       element.classList.toggle("active");
